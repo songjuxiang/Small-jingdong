@@ -66,6 +66,15 @@ def receiver_address(recipients,province,city,town,streets,mobile):
     dr.find_element(By.XPATH, "//*[@id='AddressList']/ul/li/div[1]").click()
 
 
+
+def pay1():
+    #点击账户余额
+    dr.find_element(By.ID,"issurplus").click()
+    sleep(2)
+    # 点击确认订单
+    dr.find_element(By.XPATH, "//*[@id='theForm']/div[6]/div[2]/input[1]").click()
+
+
 def pay():
     # 支付
     # 点击支付宝/快钱/财付通/其他支付
@@ -98,6 +107,6 @@ search("水果")
 receiver_address("songjuxiang","北京","北京","海淀区","123123","15836546562")
 
 sleep(2)
-pay()
+pay1()
 sleep(2)
 Delete_the_address()
